@@ -1,0 +1,10 @@
+:host {
+  display: block ;
+}
+.filter {
+  font-family: inherit ;
+  font-size: inherit ;
+}
+.items__item--hidden {
+  display: none ;
+}

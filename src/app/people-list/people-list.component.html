@@ -1,0 +1,29 @@
+<h2>
+			People List
+		</h2>
+
+		<div>
+			<input
+				type="text"
+				name="filter"
+				[(ngModel)]="form.filter"
+				(ngModelChange)="applyFilter()"
+				placeholder="Search..."
+				autocomplete="off"
+				autofocus
+				class="filter"
+			/>
+		</div>
+
+		<ul class="items">
+			<li
+				*ngFor="let result of results"
+				class="items__item"
+				[class.items__item--hidden]="( ! result.isVisible )">
+
+				<a routerLink="/people/{{ result.person.id }}/detail">
+					{{ result.person.name }}
+				</a>
+
+			</li>
+		</ul>

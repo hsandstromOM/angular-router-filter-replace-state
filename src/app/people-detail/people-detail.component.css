@@ -1,0 +1,9 @@
+:host {
+  display: block ;
+}
+.details__label {
+  font-weight: bold ;
+}
+.details__value {
+  margin-bottom: 10px ;
+}
