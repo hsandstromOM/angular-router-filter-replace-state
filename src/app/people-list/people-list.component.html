@@ -2,10 +2,11 @@
 			People List
 		</h2>
 
-		<div>
+		<div class="radio-toolbar">
 			<input
 				type="text"
 				name="filter"
+				value=""
 				[(ngModel)]="form.filter"
 				(ngModelChange)="applyFilter()"
 				placeholder="Search..."
@@ -13,6 +14,33 @@
 				autofocus
 				class="filter"
 			/>
+
+			<div id="C" class="column">
+				<label for="filterC">Radio button that appears like a button with the value of "C"</label>
+			 <input
+				 type="radio"
+				 name="filterC"
+				 value="C"
+				 [(ngModel)]="form.filter"
+				 (ngModelChange)="applyFilter()"
+				 autocomplete="off"
+				 autofocus
+				 class="filter"
+			 />
+				</div>
+				<div id="clear" class="column">
+					<label for="filterClear">Radio button that appears like a button with the value of ""</label>
+				 <input
+					 type="radio"
+					 name="filterClear"
+					 value= ""
+					 [(ngModel)]="form.filter"
+					 (ngModelChange)="applyFilter()"
+					 autocomplete="off"
+					 autofocus
+					 class="filter"
+				 />
+					</div>
 		</div>
 
 		<ul class="items">

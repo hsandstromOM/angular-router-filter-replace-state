@@ -8,3 +8,48 @@
 .items__item--hidden {
   display: none ;
 }
+
+.radio-toolbar {
+  display: flex;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.radio-toolbar input[type="radio"] {
+    -webkit-appearance: button;
+    background-color:#ddd;
+    padding: 5px 10px;
+    font-size:16px;
+    border: 2px solid #444;
+    color:#FFF;
+    border-radius: 4px;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
+#C input[type="radio"]:after {
+    content: "C";
+    color: #000;
+}
+
+#clear input[type="radio"]:after {
+    content: "Clear";
+    color: #000;
+}
+
+.radio-toolbar input[type="radio"]:hover {
+  background-color: #dfd;
+}
+
+.radio-toolbar input[type="radio"]:checked {
+    background-color:#bfb;
+    border-color: #4c4;
+}
+.radio-toolbar label {
+    margin-left: 1rem;
+}

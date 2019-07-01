@@ -19,39 +19,8 @@ interface Result {
 
 @Component({
 	selector: "people-list",
-	styleUrls: [ "./people-list.component.css" ],
-	template:
-	`
-		<h2>
-			People List
-		</h2>
-
-		<div>
-			<input
-				type="text"
-				name="filter"
-				[(ngModel)]="form.filter"
-				(ngModelChange)="applyFilter()"
-				placeholder="Search..."
-				autocomplete="off"
-				autofocus
-				class="filter"
-			/>
-		</div>
-
-		<ul class="items">
-			<li
-				*ngFor="let result of results"
-				class="items__item"
-				[class.items__item--hidden]="( ! result.isVisible )">
-
-				<a routerLink="/people/{{ result.person.id }}/detail">
-					{{ result.person.name }}
-				</a>
-
-			</li>
-		</ul>
-	`
+	templateUrl: './people-list.component.html',
+	styleUrls: [ "./people-list.component.css" ]
 })
 export class PeopleListComponent {
 
@@ -76,7 +45,7 @@ export class PeopleListComponent {
 		this.router = router;
 
 		this.form = {
-			filter: ( activatedRoute.snapshot.params.filter || "" )
+			filter: ( this.activatedRoute.snapshot.params.filter || "" )
 		};
 		this.results = [];
 
